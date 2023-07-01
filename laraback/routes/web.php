@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // Ruta pentru înregistrare
+Route::post('/register', 'AuthController@register');
+
+// Ruta pentru autentificare
+Route::post('/login', 'AuthController@login');
+
+// Ruta pentru ieșire
+Route::post('/logout', 'AuthController@logout');
+
 });
